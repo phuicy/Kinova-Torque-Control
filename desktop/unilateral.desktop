@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Unilateral Torque Control
+Comment=Tests the performance of the unilateral torque based control system.
+Exec=unilateral
+Path=${PWD}/build/AppDir/usr/local/bin/
+Icon=logo
+Terminal=true
+Type=Application
+Categories=Utility;Development;

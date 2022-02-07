@@ -1,0 +1,35 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=9
+    os=Linux
+
+[requires]
+    kortex_api_cpp/2.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    arch_build=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=9
+    os=Linux
+    os_build=Linux
+
+[full_requires]
+    kortex_api_cpp/2.3.0-r.34@kortex/stable:c023db9fc677d4d0b3bd0c20f71385e4cf8a1220
+
+[full_options]
+    kortex_api_cpp:shared=False
+
+[recipe_hash]
+
+
+[env]
+

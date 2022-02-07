@@ -1,0 +1,105 @@
+\hypertarget{unilateral_8cpp}{}\doxysection{/home/phuicy/workspace/kinova-\/unilateral/unilateral.cpp File Reference}
+\label{unilateral_8cpp}\index{/home/phuicy/workspace/kinova-\/unilateral/unilateral.cpp@{/home/phuicy/workspace/kinova-\/unilateral/unilateral.cpp}}
+
+
+The main file for the unilateral executable.  
+
+
+{\ttfamily \#include \char`\"{}Demand\+Subscriber.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Joint\+State\+Publisher.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Kinova\+Control.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Kinova\+Robot.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Loop\+Cycle.\+h\char`\"{}}\newline
+Include dependency graph for unilateral.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unilateral_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_a36f00293ac33c883d85365290185eac5}\label{unilateral_8cpp_a36f00293ac33c883d85365290185eac5}} 
+void {\bfseries home\+\_\+trigger} (const std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Request $>$ request, std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Response $>$ response)
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_ac3d15f5ec4da90d8277506d211341209}\label{unilateral_8cpp_ac3d15f5ec4da90d8277506d211341209}} 
+void {\bfseries robot\+\_\+start\+\_\+trigger} (const std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Request $>$ request, std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Response $>$ response)
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_aefbd61f3000df731d644cd435be0e6a5}\label{unilateral_8cpp_aefbd61f3000df731d644cd435be0e6a5}} 
+void {\bfseries robot\+\_\+stop\+\_\+trigger} (const std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Request $>$ request, std\+::shared\+\_\+ptr$<$ std\+\_\+srvs\+::srv\+::\+Trigger\+::\+Response $>$ response)
+\item 
+int \mbox{\hyperlink{unilateral_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main entry point of programm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{unilateral_8cpp_a47f2a607b1a119a3cfe04ec45143b86f}{first\+Position}}
+\begin{DoxyCompactList}\small\item\em desired Position and Velocity for PD controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unilateral_8cpp_aa291c92d7ce76a099c9d8328a8517794}\label{unilateral_8cpp_aa291c92d7ce76a099c9d8328a8517794}} 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} {\bfseries first\+Velocity}
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_a776f2cf60c53ae4c8c2e1e8979af4362}\label{unilateral_8cpp_a776f2cf60c53ae4c8c2e1e8979af4362}} 
+auto {\bfseries home\+\_\+local} = std\+::make\+\_\+shared$<$ std\+::atomic$<$bool$>$ $>$()
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_a391fe1734fa4153980e3e457482ec743}\label{unilateral_8cpp_a391fe1734fa4153980e3e457482ec743}} 
+auto {\bfseries robot\+\_\+start} = std\+::make\+\_\+shared$<$ std\+::atomic$<$bool$>$ $>$()
+\item 
+\mbox{\Hypertarget{unilateral_8cpp_a3a1fc433a5bb3a571d99758262d43bae}\label{unilateral_8cpp_a3a1fc433a5bb3a571d99758262d43bae}} 
+auto {\bfseries robot\+\_\+stop} = std\+::make\+\_\+shared$<$ std\+::atomic$<$bool$>$ $>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main file for the unilateral executable. 
+
+\begin{DoxyAuthor}{Author}
+Guy Burroughes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/01-\/09
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{unilateral_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{unilateral_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{unilateral.cpp@{unilateral.cpp}!main@{main}}
+\index{main@{main}!unilateral.cpp@{unilateral.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main entry point of programm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{unilateral_8cpp_a47f2a607b1a119a3cfe04ec45143b86f}\label{unilateral_8cpp_a47f2a607b1a119a3cfe04ec45143b86f}} 
+\index{unilateral.cpp@{unilateral.cpp}!firstPosition@{firstPosition}}
+\index{firstPosition@{firstPosition}!unilateral.cpp@{unilateral.cpp}}
+\doxysubsubsection{\texorpdfstring{firstPosition}{firstPosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} first\+Position}
+
+
+
+desired Position and Velocity for PD controller. 
+

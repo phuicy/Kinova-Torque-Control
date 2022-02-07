@@ -1,0 +1,134 @@
+\hypertarget{classPDController}{}\doxysection{P\+D\+Controller Class Reference}
+\label{classPDController}\index{PDController@{PDController}}
+
+
+A PD controller that work in degrees \mbox{[}0,360\mbox{]} Loops around 360 inflection point. Kp and Kd are R\+OS params that update every 500ms.  
+
+
+
+
+{\ttfamily \#include $<$P\+D.\+h$>$}
+
+
+
+Inheritance diagram for P\+D\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classPDController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for P\+D\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classPDController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPDController_a13540d49fe539ba82a76e285b98b9bc1}{P\+D\+Controller}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPDController}{P\+D\+Controller}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPDController_a2e039f5394673210b34b60bb47b7d2b9}{respond}} ()
+\begin{DoxyCompactList}\small\item\em updates Kp and Kd from R\+OS params, is running in a thread \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classPDController_ac72b9e9fded09eb9450c0702bebaa4bb}{calculate}} (\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} p\+Actual, \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} p\+Demand, \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} q\+Actual, \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} q\+Demand)
+\begin{DoxyCompactList}\small\item\em Calculate control response for PD kp(p\+B-\/pA) + Kd(q\+B-\/qA) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classPDController_a77b21ad99f157fdf3d574b795689211b}{get\+Kp}} ()
+\begin{DoxyCompactList}\small\item\em Get the Kp object (thread safe) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classPDController_ae3ce92fe34139d3bdfffbdd0b4e9ccba}{get\+Kd}} ()
+\begin{DoxyCompactList}\small\item\em Get the Kd object (thread safe) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A PD controller that work in degrees \mbox{[}0,360\mbox{]} Loops around 360 inflection point. Kp and Kd are R\+OS params that update every 500ms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPDController_a13540d49fe539ba82a76e285b98b9bc1}\label{classPDController_a13540d49fe539ba82a76e285b98b9bc1}} 
+\index{PDController@{PDController}!PDController@{PDController}}
+\index{PDController@{PDController}!PDController@{PDController}}
+\doxysubsubsection{\texorpdfstring{PDController()}{PDController()}}
+{\footnotesize\ttfamily P\+D\+Controller\+::\+P\+D\+Controller (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classPDController}{P\+D\+Controller}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of robot under control. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPDController_ac72b9e9fded09eb9450c0702bebaa4bb}\label{classPDController_ac72b9e9fded09eb9450c0702bebaa4bb}} 
+\index{PDController@{PDController}!calculate@{calculate}}
+\index{calculate@{calculate}!PDController@{PDController}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} P\+D\+Controller\+::calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{p\+Actual,  }\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{p\+Demand,  }\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{q\+Actual,  }\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{q\+Demand }\end{DoxyParamCaption})}
+
+
+
+Calculate control response for PD kp(p\+B-\/pA) + Kd(q\+B-\/qA) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Actual} & actual position \\
+\hline
+{\em p\+Demand} & request position \\
+\hline
+{\em q\+Actual} & actual velocity \\
+\hline
+{\em q\+Demand} & request velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen7f control u 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPDController_ae3ce92fe34139d3bdfffbdd0b4e9ccba}\label{classPDController_ae3ce92fe34139d3bdfffbdd0b4e9ccba}} 
+\index{PDController@{PDController}!getKd@{getKd}}
+\index{getKd@{getKd}!PDController@{PDController}}
+\doxysubsubsection{\texorpdfstring{getKd()}{getKd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} P\+D\+Controller\+::get\+Kd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Kd object (thread safe) 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f Kd 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPDController_a77b21ad99f157fdf3d574b795689211b}\label{classPDController_a77b21ad99f157fdf3d574b795689211b}} 
+\index{PDController@{PDController}!getKp@{getKp}}
+\index{getKp@{getKp}!PDController@{PDController}}
+\doxysubsubsection{\texorpdfstring{getKp()}{getKp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} P\+D\+Controller\+::get\+Kp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Kp object (thread safe) 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f Kp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPDController_a2e039f5394673210b34b60bb47b7d2b9}\label{classPDController_a2e039f5394673210b34b60bb47b7d2b9}} 
+\index{PDController@{PDController}!respond@{respond}}
+\index{respond@{respond}!PDController@{PDController}}
+\doxysubsubsection{\texorpdfstring{respond()}{respond()}}
+{\footnotesize\ttfamily void P\+D\+Controller\+::respond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates Kp and Kd from R\+OS params, is running in a thread 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/phuicy/workspace/kinova-\/unilateral/includes/\mbox{\hyperlink{PD_8h}{P\+D.\+h}}\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/P\+D.\+cpp\end{DoxyCompactItemize}

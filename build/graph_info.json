@@ -1,0 +1,14 @@
+{
+ "options": [
+  [
+   "kortex_api_cpp:shared",
+   "False"
+  ]
+ ],
+ "root": {
+  "name": null,
+  "version": null,
+  "user": null,
+  "channel": null
+ }
+}

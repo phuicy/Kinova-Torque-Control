@@ -1,0 +1,12 @@
+OUTPUT_DIRECTORY       = @PROJECT_BINARY_DIR@/doc_doxygen/
+INPUT                  = @PROJECT_SOURCE_DIR@/src/ @PROJECT_SOURCE_DIR@/includes @PROJECT_SOURCE_DIR@/includes/Math @PROJECT_SOURCE_DIR@/docs @PROJECT_SOURCE_DIR@
+HTML_EXTRA_STYLESHEET  = @PROJECT_SOURCE_DIR@/third-party/doxygen-awesome-css/doxygen-awesome.css
+GENERATE_TREEVIEW      = YES # required!
+
+PROJECT_NAME           = "Kinova Unilateral"
+PROJECT_BRIEF          = "Unilateral haptic control of Kinova gen3"
+
+USE_MDFILE_AS_MAINPAGE = @PROJECT_SOURCE_DIR@/README.md
+
+GENERATE_LATEX         = YES
+USE_MATHJAX            = YES

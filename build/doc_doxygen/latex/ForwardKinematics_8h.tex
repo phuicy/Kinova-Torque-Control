@@ -1,0 +1,61 @@
+\hypertarget{ForwardKinematics_8h}{}\doxysection{/home/phuicy/workspace/kinova-\/unilateral/includes/\+Math/\+Forward\+Kinematics.h File Reference}
+\label{ForwardKinematics_8h}\index{/home/phuicy/workspace/kinova-\/unilateral/includes/Math/ForwardKinematics.h@{/home/phuicy/workspace/kinova-\/unilateral/includes/Math/ForwardKinematics.h}}
+{\ttfamily \#include \char`\"{}Utils.\+h\char`\"{}}\newline
+Include dependency graph for Forward\+Kinematics.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{ForwardKinematics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{ForwardKinematics_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ForwardKinematics_8h_a95fa23bd8a3e97af4645bfc582ef3a02}{forward\+\_\+kinematics}} (const Eigen\+::\+Matrix$<$ float, 7, 1 $>$ q, Eigen\+::\+Matrix$<$ float, 3, 1 $>$ \&x, Eigen\+::\+Matrix$<$ float, 3, 3 $>$ \&R)
+\begin{DoxyCompactList}\small\item\em Auto generated forward kinematics, calculate end-\/effector position from joint angles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Guy Burroughes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/12-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ForwardKinematics_8h_a95fa23bd8a3e97af4645bfc582ef3a02}\label{ForwardKinematics_8h_a95fa23bd8a3e97af4645bfc582ef3a02}} 
+\index{ForwardKinematics.h@{ForwardKinematics.h}!forward\_kinematics@{forward\_kinematics}}
+\index{forward\_kinematics@{forward\_kinematics}!ForwardKinematics.h@{ForwardKinematics.h}}
+\doxysubsubsection{\texorpdfstring{forward\_kinematics()}{forward\_kinematics()}}
+{\footnotesize\ttfamily void forward\+\_\+kinematics (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix$<$ float, 7, 1 $>$}]{q,  }\item[{Eigen\+::\+Matrix$<$ float, 3, 1 $>$ \&}]{x,  }\item[{Eigen\+::\+Matrix$<$ float, 3, 3 $>$ \&}]{R }\end{DoxyParamCaption})}
+
+
+
+Auto generated forward kinematics, calculate end-\/effector position from joint angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & joint angles in degrees \\
+\hline
+{\em x} & solved position of end effector in meters. \\
+\hline
+{\em R} & Rotation in matrix form \\
+\hline
+\end{DoxyParams}

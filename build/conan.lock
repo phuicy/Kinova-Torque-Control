@@ -1,0 +1,24 @@
+{
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "options": "kortex_api_cpp:shared=False",
+    "requires": [
+     "1"
+    ],
+    "path": "conanfile.txt",
+    "context": "host"
+   },
+   "1": {
+    "ref": "kortex_api_cpp/2.3.0-r.34@kortex/stable#4a7af7ea3b5ba58e9864f879472e9d7059cd624f",
+    "options": "shared=False",
+    "package_id": "c023db9fc677d4d0b3bd0c20f71385e4cf8a1220",
+    "prev": "31f1328bb975bbcb91651afbbd827a58",
+    "context": "host"
+   }
+  },
+  "revisions_enabled": true
+ },
+ "version": "0.4",
+ "profile_host": "[settings]\narch=x86_64\narch_build=x86_64\nbuild_type=Release\ncompiler=gcc\ncompiler.libcxx=libstdc++11\ncompiler.version=9\nos=Linux\nos_build=Linux\nkortex_api_cpp:compiler=gcc\nkortex_api_cpp:compiler.version=5\n[options]\n[build_requires]\n[env]\n"
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libkinova_mock.a  CMakeFiles/kinova_mock.dir/src/KinovaRobot_mock.cpp.o CMakeFiles/kinova_mock.dir/src/KinovaControl.cpp.o CMakeFiles/kinova_mock.dir/src/LoopCycle.cpp.o CMakeFiles/kinova_mock.dir/src/DemandSubscriber.cpp.o
+/usr/bin/ranlib lib/libkinova_mock.a

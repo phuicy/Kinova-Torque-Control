@@ -1,0 +1,278 @@
+\hypertarget{classKinovaRobot}{}\doxysection{Kinova\+Robot Class Reference}
+\label{classKinovaRobot}\index{KinovaRobot@{KinovaRobot}}
+
+
+Kinova robot hardware interface.  
+
+
+
+
+{\ttfamily \#include $<$Kinova\+Robot.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKinovaRobot_ade50cf740a4984b05a9fd0295e1603a3}{Kinova\+Robot}} (std\+::string \mbox{\hyperlink{classKinovaRobot_a489376e28cc9d1ed22d9cbc92c569179}{name}}, std\+::string address, std\+::string username=\char`\"{}admin\char`\"{}, std\+::string password=\char`\"{}admin\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a new Kinova Robot object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKinovaRobot_a4c42b3fd24bac5fc9e808b8eccefb791}{$\sim$\+Kinova\+Robot}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Kinova Robot object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKinovaRobot_afbe8d8801a1504ce61f089c65c786311}{home}} ()
+\begin{DoxyCompactList}\small\item\em Will attempt to move the kinova to C\+M\+S\+\_\+\+H\+O\+ME. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKinovaRobot_a3c92f3cc94c82a4de9139f0c09d5edf2}{get}} (const Kinova\+::\+Api\+::\+Base\+Cyclic\+::\+Feedback $\ast$base\+\_\+feedback)
+\begin{DoxyCompactList}\small\item\em set local cache of current robot location. Requires feedback input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKinovaRobot_ae07f2a63cc303ebb246c31b04bb101e2}{set}} (\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} command)
+\begin{DoxyCompactList}\small\item\em Set position of the robot (and times loop) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classKinovaRobot_abb4cd076d4653f2cc6f75841ee027d3a}{get\+\_\+pose}} ()
+\begin{DoxyCompactList}\small\item\em Get the current pose (thread safe) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classKinovaRobot_a0393d84207c602aa70119ee790d6dd1e}{get\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the current velocity (thread safe) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classKinovaRobot_a677543e34bd0aff4157581a66b3ee228}{get\+\_\+torque}} ()
+\begin{DoxyCompactList}\small\item\em Get the current torque (thread safe) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} \mbox{\hyperlink{classKinovaRobot_ada002e82a43b8caefbbe1f1e06393c64}{get\+\_\+command}} ()
+\begin{DoxyCompactList}\small\item\em Get the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKinovaRobot_ab1f83906d300784ca4ab7ab779972ae6}{set\+\_\+command}} (\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} actual)
+\begin{DoxyCompactList}\small\item\em Set the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKinovaRobot_af7a26457558bd069220c5830e0a70fad}\label{classKinovaRobot_af7a26457558bd069220c5830e0a70fad}} 
+void \mbox{\hyperlink{classKinovaRobot_af7a26457558bd069220c5830e0a70fad}{torque\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Set robot in to torque mode. Require 1khz control \mbox{\hyperlink{classKinovaRobot_ae07f2a63cc303ebb246c31b04bb101e2}{set()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKinovaRobot_a4e8c8142fe77e0d449b84fffc1fa77b4}{position\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Set robot into position high level control mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKinovaRobot_a5dab007cc16f583edd6bfc9e6c8a9f20}{clear\+Fault}} ()
+\begin{DoxyCompactList}\small\item\em Attempt to clear any faults of the robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKinovaRobot_ab5454d516c701603e7044867a5077989}{get\+All\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Get the All connected Devices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKinovaRobot_aa26ebbbfd9bcd7f16405176ebf502371}\label{classKinovaRobot_aa26ebbbfd9bcd7f16405176ebf502371}} 
+void {\bfseries set\+State} (std\+::string state\+\_\+)
+\item 
+\mbox{\Hypertarget{classKinovaRobot_af954eef47769c043b367ff8c7ea9ef4d}\label{classKinovaRobot_af954eef47769c043b367ff8c7ea9ef4d}} 
+std\+::string {\bfseries get\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classKinovaRobot_a489376e28cc9d1ed22d9cbc92c569179}{name}}
+\begin{DoxyCompactList}\small\item\em Name of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr unsigned int \mbox{\hyperlink{classKinovaRobot_ab1247d6120ac396adb37c1af9160d554}{actuator\+\_\+count}} = 7
+\begin{DoxyCompactList}\small\item\em Number of joints in the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kinova robot hardware interface. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKinovaRobot_ade50cf740a4984b05a9fd0295e1603a3}\label{classKinovaRobot_ade50cf740a4984b05a9fd0295e1603a3}} 
+\index{KinovaRobot@{KinovaRobot}!KinovaRobot@{KinovaRobot}}
+\index{KinovaRobot@{KinovaRobot}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{KinovaRobot()}{KinovaRobot()}}
+{\footnotesize\ttfamily Kinova\+Robot\+::\+Kinova\+Robot (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{address,  }\item[{std\+::string}]{username = {\ttfamily \char`\"{}admin\char`\"{}},  }\item[{std\+::string}]{password = {\ttfamily \char`\"{}admin\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new Kinova Robot object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the robot \\
+\hline
+{\em address} & Ip address of the robot \\
+\hline
+{\em username} & username of the robot \\
+\hline
+{\em password} & password of the robot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKinovaRobot_a4c42b3fd24bac5fc9e808b8eccefb791}\label{classKinovaRobot_a4c42b3fd24bac5fc9e808b8eccefb791}} 
+\index{KinovaRobot@{KinovaRobot}!````~KinovaRobot@{$\sim$KinovaRobot}}
+\index{````~KinovaRobot@{$\sim$KinovaRobot}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{$\sim$KinovaRobot()}{~KinovaRobot()}}
+{\footnotesize\ttfamily Kinova\+Robot\+::$\sim$\+Kinova\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Kinova Robot object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKinovaRobot_a5dab007cc16f583edd6bfc9e6c8a9f20}\label{classKinovaRobot_a5dab007cc16f583edd6bfc9e6c8a9f20}} 
+\index{KinovaRobot@{KinovaRobot}!clearFault@{clearFault}}
+\index{clearFault@{clearFault}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{clearFault()}{clearFault()}}
+{\footnotesize\ttfamily bool Kinova\+Robot\+::clear\+Fault (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempt to clear any faults of the robot. 
+
+\begin{DoxyReturn}{Returns}
+true Succesfully cleared faults if there were any 
+
+false Didnt clear faults, robot won\textquotesingle{}t continue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_a3c92f3cc94c82a4de9139f0c09d5edf2}\label{classKinovaRobot_a3c92f3cc94c82a4de9139f0c09d5edf2}} 
+\index{KinovaRobot@{KinovaRobot}!get@{get}}
+\index{get@{get}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily void Kinova\+Robot\+::get (\begin{DoxyParamCaption}\item[{const Kinova\+::\+Api\+::\+Base\+Cyclic\+::\+Feedback $\ast$}]{base\+\_\+feedback }\end{DoxyParamCaption})}
+
+
+
+set local cache of current robot location. Requires feedback input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+\_\+feedback} & feeback input from robot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKinovaRobot_ada002e82a43b8caefbbe1f1e06393c64}\label{classKinovaRobot_ada002e82a43b8caefbbe1f1e06393c64}} 
+\index{KinovaRobot@{KinovaRobot}!get\_command@{get\_command}}
+\index{get\_command@{get\_command}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{get\_command()}{get\_command()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} Kinova\+Robot\+::get\+\_\+command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the command. 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f current command (Nm) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_abb4cd076d4653f2cc6f75841ee027d3a}\label{classKinovaRobot_abb4cd076d4653f2cc6f75841ee027d3a}} 
+\index{KinovaRobot@{KinovaRobot}!get\_pose@{get\_pose}}
+\index{get\_pose@{get\_pose}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{get\_pose()}{get\_pose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} Kinova\+Robot\+::get\+\_\+pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current pose (thread safe) 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f current pose (degrees) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_a677543e34bd0aff4157581a66b3ee228}\label{classKinovaRobot_a677543e34bd0aff4157581a66b3ee228}} 
+\index{KinovaRobot@{KinovaRobot}!get\_torque@{get\_torque}}
+\index{get\_torque@{get\_torque}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{get\_torque()}{get\_torque()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} Kinova\+Robot\+::get\+\_\+torque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current torque (thread safe) 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f current torque (Nm) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_a0393d84207c602aa70119ee790d6dd1e}\label{classKinovaRobot_a0393d84207c602aa70119ee790d6dd1e}} 
+\index{KinovaRobot@{KinovaRobot}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} Kinova\+Robot\+::get\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current velocity (thread safe) 
+
+\begin{DoxyReturn}{Returns}
+Eigen7f current velocity (degrees/s) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_ab5454d516c701603e7044867a5077989}\label{classKinovaRobot_ab5454d516c701603e7044867a5077989}} 
+\index{KinovaRobot@{KinovaRobot}!getAllDevices@{getAllDevices}}
+\index{getAllDevices@{getAllDevices}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{getAllDevices()}{getAllDevices()}}
+{\footnotesize\ttfamily void Kinova\+Robot\+::get\+All\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the All connected Devices. 
+
+\mbox{\Hypertarget{classKinovaRobot_afbe8d8801a1504ce61f089c65c786311}\label{classKinovaRobot_afbe8d8801a1504ce61f089c65c786311}} 
+\index{KinovaRobot@{KinovaRobot}!home@{home}}
+\index{home@{home}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily bool Kinova\+Robot\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will attempt to move the kinova to C\+M\+S\+\_\+\+H\+O\+ME. 
+
+\begin{DoxyReturn}{Returns}
+true Robot homed successfully 
+
+false robot failed to home 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKinovaRobot_a4e8c8142fe77e0d449b84fffc1fa77b4}\label{classKinovaRobot_a4e8c8142fe77e0d449b84fffc1fa77b4}} 
+\index{KinovaRobot@{KinovaRobot}!positionMode@{positionMode}}
+\index{positionMode@{positionMode}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{positionMode()}{positionMode()}}
+{\footnotesize\ttfamily void Kinova\+Robot\+::position\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set robot into position high level control mode. 
+
+\mbox{\Hypertarget{classKinovaRobot_ae07f2a63cc303ebb246c31b04bb101e2}\label{classKinovaRobot_ae07f2a63cc303ebb246c31b04bb101e2}} 
+\index{KinovaRobot@{KinovaRobot}!set@{set}}
+\index{set@{set}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Kinova\+Robot\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{command }\end{DoxyParamCaption})}
+
+
+
+Set position of the robot (and times loop) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & control input (torque in Nm) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKinovaRobot_ab1f83906d300784ca4ab7ab779972ae6}\label{classKinovaRobot_ab1f83906d300784ca4ab7ab779972ae6}} 
+\index{KinovaRobot@{KinovaRobot}!set\_command@{set\_command}}
+\index{set\_command@{set\_command}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{set\_command()}{set\_command()}}
+{\footnotesize\ttfamily void Kinova\+Robot\+::set\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actual} & actual command (torque) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKinovaRobot_ab1247d6120ac396adb37c1af9160d554}\label{classKinovaRobot_ab1247d6120ac396adb37c1af9160d554}} 
+\index{KinovaRobot@{KinovaRobot}!actuator\_count@{actuator\_count}}
+\index{actuator\_count@{actuator\_count}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{actuator\_count}{actuator\_count}}
+{\footnotesize\ttfamily constexpr unsigned int Kinova\+Robot\+::actuator\+\_\+count = 7\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Number of joints in the robot. 
+
+\mbox{\Hypertarget{classKinovaRobot_a489376e28cc9d1ed22d9cbc92c569179}\label{classKinovaRobot_a489376e28cc9d1ed22d9cbc92c569179}} 
+\index{KinovaRobot@{KinovaRobot}!name@{name}}
+\index{name@{name}!KinovaRobot@{KinovaRobot}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const std\+::string Kinova\+Robot\+::name}
+
+
+
+Name of the robot. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/phuicy/workspace/kinova-\/unilateral/includes/\mbox{\hyperlink{KinovaRobot_8h}{Kinova\+Robot.\+h}}\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/Kinova\+Robot.\+cpp\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/Kinova\+Robot\+\_\+mock.\+cpp\end{DoxyCompactItemize}

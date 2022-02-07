@@ -1,0 +1,59 @@
+\hypertarget{Gravity_8h}{}\doxysection{/home/phuicy/workspace/kinova-\/unilateral/includes/\+Math/\+Gravity.h File Reference}
+\label{Gravity_8h}\index{/home/phuicy/workspace/kinova-\/unilateral/includes/Math/Gravity.h@{/home/phuicy/workspace/kinova-\/unilateral/includes/Math/Gravity.h}}
+{\ttfamily \#include \char`\"{}Utils.\+h\char`\"{}}\newline
+Include dependency graph for Gravity.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{Gravity_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{Gravity_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Gravity_8h_a196ebd70682e0aa13edb7f45ab5629ef}{gravity}} (const Eigen\+::\+Matrix$<$ float, 7, 1 $>$ q, Eigen\+::\+Matrix$<$ float, 7, 1 $>$ \&G)
+\begin{DoxyCompactList}\small\item\em Auto-\/generated function which calculates gravity vector torque per joint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Guy Burroughes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/12-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Gravity_8h_a196ebd70682e0aa13edb7f45ab5629ef}\label{Gravity_8h_a196ebd70682e0aa13edb7f45ab5629ef}} 
+\index{Gravity.h@{Gravity.h}!gravity@{gravity}}
+\index{gravity@{gravity}!Gravity.h@{Gravity.h}}
+\doxysubsubsection{\texorpdfstring{gravity()}{gravity()}}
+{\footnotesize\ttfamily void gravity (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix$<$ float, 7, 1 $>$}]{q,  }\item[{Eigen\+::\+Matrix$<$ float, 7, 1 $>$ \&}]{G }\end{DoxyParamCaption})}
+
+
+
+Auto-\/generated function which calculates gravity vector torque per joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & joint angles in degrees \\
+\hline
+{\em G} & Torque to balance gravity at each joint (Nm) \\
+\hline
+\end{DoxyParams}

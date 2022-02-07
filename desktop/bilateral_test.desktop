@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Bilateral Test
+Comment=Tests the loop cycle performance of the bilateral control system.
+Exec=bilateral_test
+Path=${PWD}/build/AppDir/usr/bin/
+Icon=logo
+Terminal=false
+Type=Application
+Categories=Utility;Development;

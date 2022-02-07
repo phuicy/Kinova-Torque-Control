@@ -1,0 +1,133 @@
+\hypertarget{classLoopCycle}{}\doxysection{Loop\+Cycle Class Reference}
+\label{classLoopCycle}\index{LoopCycle@{LoopCycle}}
+
+
+The class that runs the 1K\+Hz control loop. File has 2 separate versions, one for bilateral and one for unilateral. This is too avoid function pointers in the main loop cycle.  
+
+
+
+
+{\ttfamily \#include $<$Loop\+Cycle.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoopCycle_a3f0bd9f039f337441a07fbcc3596bb14}{Loop\+Cycle}} (rclcpp\+::\+Node\+::\+Shared\+Ptr node, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$ robot, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$ robot\+Control)
+\begin{DoxyCompactList}\small\item\em Main control loop for unilateral. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLoopCycle_ab979b4f297193cc88924ba424b49785d}{Loop\+Cycle}} (rclcpp\+::\+Node\+::\+Shared\+Ptr node, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$ local, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$ local\+Control, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$ remote, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$ remote\+Control)
+\begin{DoxyCompactList}\small\item\em Construct a new Loop Cycle object for bilateral mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoopCycle_a70e617cfab96d9fc68cef14919a384a4}\label{classLoopCycle_a70e617cfab96d9fc68cef14919a384a4}} 
+{\bfseries Loop\+Cycle} (const \mbox{\hyperlink{classLoopCycle}{Loop\+Cycle}} \&loop\+Cycle)
+\item 
+\mbox{\Hypertarget{classLoopCycle_a1dc9988b84d87c13714225667da1194a}\label{classLoopCycle_a1dc9988b84d87c13714225667da1194a}} 
+{\bfseries Loop\+Cycle} (\mbox{\hyperlink{classLoopCycle}{Loop\+Cycle}} \&\&loop\+Cycle)
+\item 
+void \mbox{\hyperlink{classLoopCycle_ad228bab5ce8967a53d38c987cc9dc228}{loop}} ()
+\begin{DoxyCompactList}\small\item\em the Main 1K\+Hz loop \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoopCycle_a3ba576ecd893401d43dd5f84fda149d7}{set\+Demand}} (\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} pose, \mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}} velocity)
+\begin{DoxyCompactList}\small\item\em Set the Position demand. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoopCycle_a08cda48752b7e177784a1f3b6b1224eb}{set\+Task\+Demand}} (Eigen6f pose)
+\begin{DoxyCompactList}\small\item\em Set the task demand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class that runs the 1K\+Hz control loop. File has 2 separate versions, one for bilateral and one for unilateral. This is too avoid function pointers in the main loop cycle. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoopCycle_a3f0bd9f039f337441a07fbcc3596bb14}\label{classLoopCycle_a3f0bd9f039f337441a07fbcc3596bb14}} 
+\index{LoopCycle@{LoopCycle}!LoopCycle@{LoopCycle}}
+\index{LoopCycle@{LoopCycle}!LoopCycle@{LoopCycle}}
+\doxysubsubsection{\texorpdfstring{LoopCycle()}{LoopCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Loop\+Cycle\+::\+Loop\+Cycle (\begin{DoxyParamCaption}\item[{rclcpp\+::\+Node\+::\+Shared\+Ptr}]{node,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$}]{robot,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$}]{robot\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Main control loop for unilateral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Ros node for logging \\
+\hline
+{\em robot} & Robot hardware interface \\
+\hline
+{\em robot\+Control} & Controllers interface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoopCycle_ab979b4f297193cc88924ba424b49785d}\label{classLoopCycle_ab979b4f297193cc88924ba424b49785d}} 
+\index{LoopCycle@{LoopCycle}!LoopCycle@{LoopCycle}}
+\index{LoopCycle@{LoopCycle}!LoopCycle@{LoopCycle}}
+\doxysubsubsection{\texorpdfstring{LoopCycle()}{LoopCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Loop\+Cycle\+::\+Loop\+Cycle (\begin{DoxyParamCaption}\item[{rclcpp\+::\+Node\+::\+Shared\+Ptr}]{node,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$}]{local,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$}]{local\+Control,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaRobot}{Kinova\+Robot}} $>$}]{remote,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classKinovaControl}{Kinova\+Control}} $>$}]{remote\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Loop Cycle object for bilateral mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & ros node for logging \\
+\hline
+{\em local} & local robot hardware interface \\
+\hline
+{\em local\+Control} & local robot controller interface \\
+\hline
+{\em remote} & remote robot hardware interface \\
+\hline
+{\em remote\+Control} & remote robot controller interface \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoopCycle_ad228bab5ce8967a53d38c987cc9dc228}\label{classLoopCycle_ad228bab5ce8967a53d38c987cc9dc228}} 
+\index{LoopCycle@{LoopCycle}!loop@{loop}}
+\index{loop@{loop}!LoopCycle@{LoopCycle}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Loop\+Cycle\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the Main 1K\+Hz loop 
+
+\mbox{\Hypertarget{classLoopCycle_a3ba576ecd893401d43dd5f84fda149d7}\label{classLoopCycle_a3ba576ecd893401d43dd5f84fda149d7}} 
+\index{LoopCycle@{LoopCycle}!setDemand@{setDemand}}
+\index{setDemand@{setDemand}!LoopCycle@{LoopCycle}}
+\doxysubsubsection{\texorpdfstring{setDemand()}{setDemand()}}
+{\footnotesize\ttfamily void Loop\+Cycle\+::set\+Demand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{pose,  }\item[{\mbox{\hyperlink{Utils_8h_ac8db88d6b14f0597243c3fd66e677208}{Eigen7f}}}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Set the Position demand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & demand pose \\
+\hline
+{\em velocity} & demand velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoopCycle_a08cda48752b7e177784a1f3b6b1224eb}\label{classLoopCycle_a08cda48752b7e177784a1f3b6b1224eb}} 
+\index{LoopCycle@{LoopCycle}!setTaskDemand@{setTaskDemand}}
+\index{setTaskDemand@{setTaskDemand}!LoopCycle@{LoopCycle}}
+\doxysubsubsection{\texorpdfstring{setTaskDemand()}{setTaskDemand()}}
+{\footnotesize\ttfamily void Loop\+Cycle\+::set\+Task\+Demand (\begin{DoxyParamCaption}\item[{Eigen6f}]{pose }\end{DoxyParamCaption})}
+
+
+
+Set the task demand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & demand pose (x, y, z, r, p, yaw) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/phuicy/workspace/kinova-\/unilateral/includes/\mbox{\hyperlink{LoopCycle_8h}{Loop\+Cycle.\+h}}\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/Loop\+Cycle.\+cpp\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/Loop\+Cycle\+\_\+ik.\+cpp\item 
+/home/phuicy/workspace/kinova-\/unilateral/src/Loop\+Cycle\+\_\+unilateral.\+cpp\end{DoxyCompactItemize}
