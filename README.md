@@ -1,5 +1,9 @@
 # Kinova-Unilaterals
 
+## Authors
+* Guy Burroughes
+* Ozan Tokatli
+
 ## Robots Supported
 
 * Kinova Gen3 Ultra 7DOF
@@ -54,6 +58,18 @@ Both gravity and coriolis compensaiton can be turned off and on by ROS parameter
 
 * ROS2 foxy - for logging
 * conan for kinova
+```bash
+sudo apt install python3 python3-pip
+sudo python3 -m pip install conan
+conan config set general.revisions_enabled=1
+conan profile new default --detect > /dev/null
+conan profile update settings.compiler.libcxx=libstdc++11 default
+mkdir -p catkin_workspace/src
+cd catkin_workspace/src
+git clone https://github.com/Kinovarobotics/ros_kortex.git
+cd ../
+rosdep install --from-paths src --ignore-src -
+```
 * build-essentials
 
 ### Optional dependencies
