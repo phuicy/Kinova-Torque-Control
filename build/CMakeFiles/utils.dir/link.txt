@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib/libutils.a  CMakeFiles/utils.dir/src/JointStatePublisher.cpp.o CMakeFiles/utils.dir/src/PD.cpp.o CMakeFiles/utils.dir/src/Math/Gravity.cpp.o CMakeFiles/utils.dir/src/Math/MassMatrix.cpp.o CMakeFiles/utils.dir/src/Math/Coriolis.cpp.o CMakeFiles/utils.dir/src/Math/ForwardKinematics.cpp.o CMakeFiles/utils.dir/src/KinovaControl.cpp.o CMakeFiles/utils.dir/src/Math/InverseKinematics.cpp.o CMakeFiles/utils.dir/src/Math/Jacobian.cpp.o
-/usr/bin/ranlib lib/libutils.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib/libkinova.a  CMakeFiles/kinova.dir/src/KinovaRobot.cpp.o CMakeFiles/kinova.dir/src/KinovaControl.cpp.o CMakeFiles/kinova.dir/src/LoopCycle.cpp.o CMakeFiles/kinova.dir/src/DemandSubscriber.cpp.o
-/usr/bin/ranlib lib/libkinova.a
